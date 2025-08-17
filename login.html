@@ -1,29 +1,79 @@
-<html>
-  <head>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800"
     />
 
-    <title>Stitch Design</title>
+    <title>Guayaquil Tours - Login</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
+    
+    <style>
+        /* Mobile-specific optimizations */
+        @media (max-width: 480px) {
+            .mobile-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .mobile-text {
+                font-size: 14px;
+            }
+            
+            .mobile-title {
+                font-size: 24px;
+            }
+            
+            .mobile-input {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+        
+        /* Prevent zoom on input focus */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            font-size: 16px;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Better touch targets */
+        button {
+            min-height: 44px;
+            min-width: 44px;
+        }
+    </style>
+</head>
+<body>
     <div
       class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark justify-between group/design-root overflow-x-hidden"
       style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
     >
       <div>
+        <!-- Header -->
         <div class="flex items-center bg-[#101a23] p-4 pb-2 justify-between">
-          <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12">Guayaquil Tours</h2>
+          <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12 mobile-text">Guayaquil Tours</h2>
           <div class="flex w-12 items-center justify-end">
             <button
               class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+              aria-label="Ayuda"
             >
               <div class="text-white" data-icon="Question" data-size="24px" data-weight="regular">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -35,38 +85,52 @@
             </button>
           </div>
         </div>
-        <h2 class="text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Bienvenido a Guayaquil Tours</h2>
-        <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">
-          Descubre la magia de Guayaquil con nosotros. Inicia sesión o crea una cuenta para comenzar tu aventura.
-        </p>
-        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-          <label class="flex flex-col min-w-40 flex-1">
-            <input
-              placeholder="Correo electrónico"
-              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#223649] focus:border-none h-14 placeholder:text-[#90adcb] p-4 text-base font-normal leading-normal"
-              value=""
-            />
-          </label>
+        
+        <!-- Main Content -->
+        <div class="mobile-padding">
+            <h2 class="text-white tracking-light mobile-title font-bold leading-tight px-4 text-center pb-3 pt-5">Bienvenido a Guayaquil Tours</h2>
+            <p class="text-white mobile-text font-normal leading-normal pb-3 pt-1 px-4 text-center">
+              Descubre la magia de Guayaquil con nosotros. Inicia sesión o crea una cuenta para comenzar tu aventura.
+            </p>
         </div>
-        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-          <label class="flex flex-col min-w-40 flex-1">
-            <input
-              placeholder="Contraseña"
-              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#223649] focus:border-none h-14 placeholder:text-[#90adcb] p-4 text-base font-normal leading-normal"
-              value=""
-            />
-          </label>
-        </div>
-        <p class="text-[#90adcb] text-sm font-normal leading-normal pb-3 pt-1 px-4 underline">¿Olvidaste tu contraseña?</p>
-        <div class="flex px-4 py-3">
-          <button
-            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-[#3d99f5] text-white text-base font-bold leading-normal tracking-[0.015em]"
-          >
-            <span class="truncate">Iniciar sesión</span>
-          </button>
-        </div>
-        <p class="text-[#90adcb] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center underline">¿No tienes una cuenta? Regístrate</p>
+        
+        <!-- Login Form -->
+        <form class="w-full" onsubmit="handleLogin(event)">
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  type="email"
+                  placeholder="Correo electrónico"
+                  class="form-input mobile-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#223649] focus:border-none h-14 placeholder:text-[#90adcb] p-4 font-normal leading-normal"
+                  required
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  type="password"
+                  placeholder="Contraseña"
+                  class="form-input mobile-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#223649] focus:border-none h-14 placeholder:text-[#90adcb] p-4 font-normal leading-normal"
+                  required
+                />
+              </label>
+            </div>
+            <p class="text-[#90adcb] mobile-text font-normal leading-normal pb-3 pt-1 px-4 underline cursor-pointer">¿Olvidaste tu contraseña?</p>
+            <div class="flex px-4 py-3">
+              <button
+                type="submit"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-[#3d99f5] text-white mobile-text font-bold leading-normal tracking-[0.015em] active:scale-95 transition-transform"
+              >
+                <span class="truncate">Iniciar sesión</span>
+              </button>
+            </div>
+        </form>
+        
+        <p class="text-[#90adcb] mobile-text font-normal leading-normal pb-3 pt-1 px-4 text-center underline cursor-pointer">¿No tienes una cuenta? Regístrate</p>
       </div>
+      
+      <!-- Footer Image -->
       <div>
         <div
           class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-none group-[:not(.dark)]/design-root:hidden"
@@ -78,5 +142,34 @@
         ></div>
       </div>
     </div>
-  </body>
+
+    <script>
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            const password = event.target.querySelector('input[type="password"]').value;
+            
+            // Aquí puedes agregar la lógica de autenticación
+            console.log('Login attempt:', { email, password });
+            
+            // Ejemplo de validación básica
+            if (email && password) {
+                alert('Inicio de sesión exitoso (simulado)');
+            } else {
+                alert('Por favor completa todos los campos');
+            }
+        }
+
+        // Prevenir zoom en iOS
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    document.body.style.zoom = '1';
+                });
+            });
+        });
+    </script>
+</body>
 </html>
